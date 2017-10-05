@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <meta charset="UTF-8">
+
+          <title>Utiliser twig</title>
+  </head>
+<body>
+
+  {% if user === null %}
+      /** afficher l'icone pas connecté **/
+    {% else %}
+      <p>{{user.pseudo}}</p>
+  {% endif %}
+
+  {% for hero in heros %}
+
+<p>Le personnage {{hero.name}} qui est un {{hero.type}} à reçu une note globale de {{hero.note}} </p> <br/> <br/>
+     {% endfor %}
+
+     <a href="detail.html.twig">Page détail</a>
+
+      </body>
+
+</html>

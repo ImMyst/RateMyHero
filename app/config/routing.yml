@@ -1,0 +1,3 @@
+hero:
+    resource: '@HeroBundle/Controller/'
+    type: annotation
