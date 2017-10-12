@@ -18,7 +18,7 @@ class HeroDetailController extends Controller
       $heroRepository = new HerosRepository();
       $heros = $heroRepository->findById($heroId);
 
-    return $this->render('HeroBundle:Review:detail.html.twig', [
+    return $this->render('HeroBundle:Default:detail.html.twig', [
         'heros' => $heros,
     ]);
   }

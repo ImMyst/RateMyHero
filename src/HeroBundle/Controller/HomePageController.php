@@ -14,6 +14,6 @@ class HomePageController extends Controller
     */
     public function listAction(Request $request)
     {
-      return new Response("Homepage");
+      return $this->render('HeroBundle:Default:homepage.html.twig');
     }
 }

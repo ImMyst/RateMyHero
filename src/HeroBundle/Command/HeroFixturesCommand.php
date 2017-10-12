@@ -8,6 +8,9 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use HeroBundle\Entity\Hero;
+use HeroBundle\Entity\Review;
+use HeroBundle\Entity\User;
+
 
 class HeroFixturesCommand extends ContainerAwareCommand
 {

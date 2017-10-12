@@ -7,6 +7,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use HeroBundle\Controller\HeroListController;
+use HeroBundle\Repository\HeroRepository;
+use HeroBundle\Entity\Hero;
+use HeroBundle\Entity\Review;
 
 class HeroListController extends Controller
 {
@@ -15,12 +18,11 @@ class HeroListController extends Controller
     */
     public function listAction(Request $request)
     {
-      $reviewRepository = new ReviewRepository();
-      $reviews = $reviewRepository->findAllReviews();
+        $heroRepository = $this->getDoctrine()->getRepository(Hero::class);
+        $heros = $heroRepository->findAll();
 
-    return $this->render('HeroBundle:Review:list.html.twig', [
-        'hero' => $heros,
-    ]);
-
+        return $this->render('HeroBundle:Default:list.html.twig', [
+            'heros' => $heros,
+        ]);
     }
 }

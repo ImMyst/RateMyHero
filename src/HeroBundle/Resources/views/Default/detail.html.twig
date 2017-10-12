@@ -1,23 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-     <meta charset="UTF-8">
-          <title>Review de tous les héros</title>
-  </head>
-<body>
-  {% if user === null %}
-      /** afficher l'icone pas connecté **/
-    {% else %}
-      <p>{{user.pseudo}}</p>
-  {% endif %}
+{% extends 'bootstrap/layout.html.twig' %}
 
-  {% for hero in heros %}
 
-<p>Le personnage {{review.name}} qui est un {{review.type}} à reçu une note globale de {{review.note}} </p> <br/> <br/>
-     {% endfor %}
+<p>Le personnage  qui est un  à reçu une note globale de  </p> <br/> <br/>
+
 
      <a href="list.html.twig">Page liste</a>
-
-      </body>
-
-</html>
