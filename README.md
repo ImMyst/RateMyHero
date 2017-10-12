@@ -7,10 +7,10 @@ Les notes sont attribuées par la communautée pour donner une note réaliste à
 
 ### Setup
 
-'''
-git clone git@github.com:tentacode/students-review.git
+```bash
+git clone git@github.com:ImMyst/RateYourHero.git
 vagrant up
 vagrant ssh
 make install
 make start
-'''
+```

@@ -16,7 +16,7 @@ class HeroFixturesCommand extends ContainerAwareCommand
 {
     protected function configure()
     {
-        $this
+      $this
             ->setName('hero:fixtures')
             ->setDescription('...')
             ->addArgument('argument', InputArgument::OPTIONAL, 'Argument description')
