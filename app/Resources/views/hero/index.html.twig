@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Heroes list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Hero</th>
+                <th>Lastname</th>
+                <th>Firstname</th>
+                <th>Type</th>
+                <th>Film</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for hero in heroes %}
+            <tr>
+                <td><a href="{{ path('admi_show', { 'id': hero.id }) }}">{{ hero.id }}</a></td>
+                <td>{{ hero.hero }}</td>
+                <td>{{ hero.lastname }}</td>
+                <td>{{ hero.firstname }}</td>
+                <td>{{ hero.type }}</td>
+                <td>{{ hero.film }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('admi_show', { 'id': hero.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

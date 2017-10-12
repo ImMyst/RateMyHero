@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Hero</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ hero.id }}</td>
+            </tr>
+            <tr>
+                <th>Hero</th>
+                <td>{{ hero.hero }}</td>
+            </tr>
+            <tr>
+                <th>Lastname</th>
+                <td>{{ hero.lastname }}</td>
+            </tr>
+            <tr>
+                <th>Firstname</th>
+                <td>{{ hero.firstname }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ hero.type }}</td>
+            </tr>
+            <tr>
+                <th>Film</th>
+                <td>{{ hero.film }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('admi_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}
