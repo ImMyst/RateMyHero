@@ -44,14 +44,14 @@ class HeroFixturesCommand extends ContainerAwareCommand
                      $passwordEncoder = $this->getContainer()->get('security.password_encoder');
                      $em = $this->getContainer()->get('doctrine.orm.entity_manager');
                      $user = new User();
-                     $user->setUser('admin');
-                     $user->setPassword($passwordEncoder->encodePassword($user, 'admin'));
+                     $user->setEmail('monsieur@madame.com');
+                     $user->setPassword($passwordEncoder->encodePassword($user, 'monsieur'));
                      $user->setRoles(['ROLE_ADMIN']);
                      $em->persist($user);
 
                      $user = new User();
-                     $user->setUser('user');
-                     $user->setPassword($passwordEncoder->encodePassword($user, 'user'));
+                     $user->setEmail('madame@monsieur.com');
+                     $user->setPassword($passwordEncoder->encodePassword($user, 'madame'));
                      $user->setRoles(['ROLE_USER']);
                      $em->persist($user);
                      $em->flush();

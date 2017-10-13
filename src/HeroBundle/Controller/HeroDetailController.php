@@ -1,25 +1,24 @@
 <?php
-
 namespace HeroBundle\Controller;
 
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use HeroBundle\Repository\HeroRepository;
+use HeroBundle\Entity\Hero;
 
 class HeroDetailController extends Controller
 {
     /**
-    * @Route("/hero/detail", name="hero_detail")
-    */
+     * @Route("/hero/detail", name="hero_detail")
+     */
+    public function detailAction()
+    {
+        // $heroRepository = new HeroRepository();
+        $herosRepository = $this->getDoctrine()->getRepository(Hero::class);
+        $hero = $herosRepository->find($heroId);
 
-      public function listAction(Request $request)
-      {
-      $heroRepository = new HerosRepository();
-      $heros = $heroRepository->findById($heroId);
-
-    return $this->render('HeroBundle:Default:detail.html.twig', [
-        'heros' => $heros,
-    ]);
-  }
+        return $this->render('HeroBundle:Default:detail.html.twig', [
+            'hero' => $hero,
+        ]);
+    }
 }

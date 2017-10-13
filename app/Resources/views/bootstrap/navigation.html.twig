@@ -9,11 +9,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item {% if route_name == 'homepage' %}active{% endif %}">
-                <a class="nav-link" href="{{ path('hero_list') }}"><i class="fa fa-users"></i> Liste des films et séries</a>
-            </li>
             <li class="nav-item {% if route_name == 'hero_list' %}active{% endif %}">
-                <a class="nav-link" href="{{ path('hero_list') }}"><i class="fa fa-address-book-o"></i> Liste des héros</a>
+                <a class="nav-link" href="{{ path('hero_list') }}"><i class="fa fa-users"></i> Liste des héros</a>
+            </li>
+            <li class="nav-item {% if route_name == 'film_list' %}active{% endif %}">
+                <a class="nav-link" href="{{ path('film_list') }}"><i class="fa fa-address-book-o"></i> Liste des films et séries</a>
             </li>
 
             {% if is_granted('ROLE_ADMIN') %}

@@ -7,8 +7,8 @@ class HerosRepository
 {
     public function findById(int $heroId): ?Heros
     {
-        $reviewRepository = new ReviewRepository();
-        $reviews = $reviewRepository->findAllReviews();
+        $herosRepository = new HerosRepository();
+        $hero = $herosRepository->findAllHeros();
         foreach($heros as $hero) {
             foreach ($hero->getHeros() as $hero) {
                 if ($hero->getId() === $heroId) {
