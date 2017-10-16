@@ -1,7 +1,7 @@
 <?php
 namespace HeroBundle\Repository;
 use Symfony\Component\Finder\Finder;
-use StudentBundle\Entity\Heros;
+use StudentBundle\Entity\Hero;
 use StudentBundle\Entity\Review;
 class ReviewRepository
 {
