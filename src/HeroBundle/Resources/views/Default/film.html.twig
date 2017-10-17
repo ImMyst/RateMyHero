@@ -6,9 +6,18 @@
     <div class="jumbotron">
         <h1><i class="fa fa-graduation-cap"></i> Films et séries</h1>
         <hr />
-
+        <ul class="list-group">
+      {% for film in films %}
+          <li class="list-group-item">
+              <a href="{{ path('film_detail', {filmId: film.id}) }}">
+                  {{ film.title }} {{ film.year }} {{ film.producer }}
+              </a>
+          </li>
+      {% else %}
+          <li class="list-group-item">Aucun Film.</li>
+      {% endfor %}
+  </ul>
         <p class="lead">
-          Star Wars
         </p>
     </div>
 {% endblock %}

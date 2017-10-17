@@ -8,8 +8,27 @@
         <hr />
 
         <p class="lead">
-          Luke Skywalker
-          <img src="{{ asset('/bundles/img/luke-skywalker-star-wars.jpg') }}" />
+          <ul class="list-group">
+            <img class="rounded-avatar"{{ asset('/bundles/img/luke-skywalker-star-wars.jpg') }} />
+        {% for hero in heros %}
+            <li class="list-group-item">
+                <b>
+                  <a href="{{ path('hero_detail', {heroId: hero.id}) }}">
+                    style{{ hero.firstname }} {{ hero.lastname }}
+                  </a>
+                </b>
+
+                <i>
+                  <a href="{{ path('hero_detail', {heroId: hero.id}) }}">
+                    {{ hero.type }}
+                  </a>
+                </i>
+
+            </li>
+        {% else %}
+            <li class="list-group-item">Aucun Héro.</li>
+        {% endfor %}
+    </ul>
         </p>
     </div>
 {% endblock %}

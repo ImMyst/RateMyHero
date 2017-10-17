@@ -8,8 +8,8 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use HeroBundle\Entity\Hero;
-use HeroBundle\Entity\Review;
 use HeroBundle\Entity\User;
+use HeroBundle\Entity\Film;
 
 
 class HeroFixturesCommand extends ContainerAwareCommand
@@ -27,12 +27,45 @@ class HeroFixturesCommand extends ContainerAwareCommand
     protected function execute(InputInterface $input, OutputInterface $output)
     {
       $hero = new Hero();
-      $hero->setFirstname ('fdsf');
-      $hero->setLastname ('dfsdf');
-
+      $hero->setFirstname('Luke');
+      $hero->setLastname('Skywalker');
+      $hero->setType('Hero');
+      $hero->setFilm('Star Wars');
       $em = $this->getContainer()->get('doctrine.orm.entity_manager');
-
       $em->persist($hero);
+
+      $hero = new Hero();
+      $hero->setFirstname('Dark');
+      $hero->setLastname('Vador');
+      $hero->setType('Vilain');
+      $hero->setFilm('Star Wars');
+      $em->persist($hero);
+
+      $hero = new Hero();
+      $hero->setFirstname('Hermione');
+      $hero->setLastname('Granger');
+      $hero->setType('Hero');
+      $hero->setFilm('Harry Potter');
+      $em->persist($hero);
+
+      $hero = new Hero();
+      $hero->setFirstname('Lord');
+      $hero->setLastname('Voldemort');
+      $hero->setType('Vilain');
+      $hero->setFilm('Harry Potter');
+      $em->persist($hero);
+
+      $film = new Film();
+      $film->setTitle('Star Wars');
+      $film->setYear('1977');
+      $film->setProducer('Georges Lucas');
+      $em->persist($film);
+
+      $film = new Film();
+      $film->setTitle('Harry Potter');
+      $film->setYear('2001');
+      $film->setProducer('Chris Colombus');
+      $em->persist($film);
 
       $em->flush();
               $output->writeln('<info>OK</info>');

@@ -22,19 +22,19 @@ class Film
      *
      * @ORM\Column(name="Title", type="string", length=255, nullable=true)
      */
-    private $title;
+    public $title;
     /**
      * @var int
      *
      * @ORM\Column(name="Year", type="integer")
      */
-    private $year;
+    public $year;
     /**
      * @var string
      *
      * @ORM\Column(name="Producer", type="string", length=255, nullable=true)
      */
-    private $producer;
+    public $producer;
 
     /**
      * Get id
@@ -51,6 +51,10 @@ class Film
         $this->title = $title;
         return $this;
     }
+    public function getTitle()
+    {
+        return $this->title;
+    }
 
     public function setYear($year)
     {
@@ -58,9 +62,19 @@ class Film
         return $this;
     }
 
+    public function getYear()
+    {
+        return $this->year;
+    }
+
     public function setProducer($producer)
     {
         $this->producer = $producer;
         return $this;
+    }
+
+    public function getProducer()
+    {
+        return $this->producer;
     }
 }

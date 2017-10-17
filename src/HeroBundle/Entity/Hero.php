@@ -16,20 +16,20 @@ class Hero
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    public $id;
     /**
      * @var string
      *
      * @ORM\Column(name="Hero", type="string", length=255, nullable=true)
      */
 
-    private $lastname;
+    public $lastname;
     /**
      * @var string
      *
      * @ORM\Column(name="Firstname", type="string", length=255, nullable=true)
      */
-    private $firstname;
+    public $firstname;
     /**
      * @var string
      *
@@ -41,16 +41,12 @@ class Hero
      *
      * @return int
      */
-    public function getId()
-    {
-        return $this->id;
-    }
     /**
      * @var string
      *
      * @ORM\Column(name="Film", type="string", length=255, nullable=true)
      */
-    private $film;
+    public $film;
     /**
      * Set hero
      *
@@ -58,6 +54,13 @@ class Hero
      *
      * @return Hero
      */
+
+     public function setId($id)
+     {
+         $this->id = $id;
+         return $this;
+
+       }
     public function setHero($hero)
     {
         $this->hero = $hero;
@@ -78,6 +81,12 @@ class Hero
         $this->film = $film;
         return $this;
     }
+
+    public function getId()
+    {
+        return $this->id;
+    }
+
     /**
      * Get hero
      *
