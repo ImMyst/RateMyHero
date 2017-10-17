@@ -1,14 +1,15 @@
 <?php
 namespace HeroBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * Hero
  *
  * @ORM\Table(name="user")
- * @ORM\Entity(repositoryClass="HeroBundle\Repository\HeroRepository")
+ * @ORM\Entity(repositoryClass="HeroBundle\Repository\UserRepository")
  */
-class User
+class User implements UserInterface
 {
     /**
      * @var int
@@ -22,75 +23,92 @@ class User
     /**
      * @var string
      *
-     * @ORM\Column(name="pseudo", type="string", length=255, nullable=true)
+     * @ORM\Column(name="Pseudo", type="string", length=255, nullable=true)
      */
     private $pseudo;
 
-      /**
-    * @var string
-    *
-    * @ORM\Column(name="password", type="string", length=255)
-      */
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="password", type="string", length=255, nullable=true)
+     */
     private $password;
 
     /**
-    * @var array
- *
- * @ORM\Column(name="roles", type="array")
- */
+     * @var array
+     *
+     * @ORM\Column(name="roles", type="array")
+     */
     private $roles;
 
     /**
-     * Get pseudo
+     * Get id
      *
      * @return int
      */
-    public function setPseudo()
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function setPseudo($pseudo)
+    {
+        $this->pseudo = $pseudo;
+        return $this;
+    }
+
+    public function getPseudo()
+    {
+       return $this->pseudo;
+    }
+
+    public function getUsername()
     {
         return $this->pseudo;
     }
-    /**
-     * Set password
-     *
-     * @param string $password
-     *
-     * @return User
-     */
+
+
 
     public function setPassword($password)
     {
         $this->password = $password;
         return $this;
     }
+
+   public function getPassword()
+   {
+       return $this->password;
+   }
+
     /**
-     * Get password
+     * Set roles
      *
-     * @return string
+     * @param array $roles
+     *
+     * @return User
      */
-    public function getPassword()
+    public function setRoles($roles)
     {
-        return $this->password;
+        $this->roles = $roles;
+        return $this;
     }
     /**
- * Set roles
- *
-    * @param array $roles
- *
-    * @return User
- */
-    public function setRoles($roles)
-{
-    $this->roles = $roles;
-    return $this;
-}
-/**
- * Get roles
- *
- * @return array
- */
+     * Get roles
+     *
+     * @return array
+     */
     public function getRoles()
-{
-    return $this->roles;
-}
+    {
+        return $this->roles;
+    }
 
+    public function getSalt()
+    {
+        return null;
+    }
+
+    public function eraseCredentials()
+    {
+        return null;
+    }
 }

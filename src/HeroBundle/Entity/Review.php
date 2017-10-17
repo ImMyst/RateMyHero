@@ -5,7 +5,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Hero
  *
  * @ORM\Table(name="review")
- * @ORM\Entity(repositoryClass="HeroBundle\Repository\HeroRepository")
+ * @ORM\Entity(repositoryClass="HeroBundle\Repository\ReviewRepository")
  */
 class Review
 {
