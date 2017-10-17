@@ -7,12 +7,10 @@ security:
         user_provider:
             entity:
                 class: HeroBundle:User
-                property: email
+                property: pseudo
 
     encoders:
-        HeroBundle\Entity\User:
-            algorithm: bcrypt
-            cost: 12
+        HeroBundle\Entity\User: plaintext
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -31,5 +29,5 @@ security:
                 path:   /logout
                 target: /
 
-    access_control:
-        - { path: ^/admin, roles: ROLE_ADMIN }
+    # access_control:
+        #- { path: ^/admin, roles: ROLE_ADMIN }

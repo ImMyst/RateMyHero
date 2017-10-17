@@ -37,25 +37,30 @@ class HeroFixturesCommand extends ContainerAwareCommand
       $em->flush();
               $output->writeln('<info>OK</info>');
 
+          $this->importUsers($output);
+
       }
 
       private function importUsers($output)
-                 {
-                     $passwordEncoder = $this->getContainer()->get('security.password_encoder');
-                     $em = $this->getContainer()->get('doctrine.orm.entity_manager');
-                     $user = new User();
-                     $user->setEmail('monsieur@madame.com');
-                     $user->setPassword($passwordEncoder->encodePassword($user, 'monsieur'));
-                     $user->setRoles(['ROLE_ADMIN']);
-                     $em->persist($user);
+      {
+         $passwordEncoder = $this->getContainer()->get('security.password_encoder');
+         $em = $this->getContainer()->get('doctrine.orm.entity_manager');
 
-                     $user = new User();
-                     $user->setEmail('madame@monsieur.com');
-                     $user->setPassword($passwordEncoder->encodePassword($user, 'madame'));
-                     $user->setRoles(['ROLE_USER']);
-                     $em->persist($user);
-                     $em->flush();
-                     $output->writeln('<info>Import users OK !</info>');
-                 }
+         $user = new User();
+         $user->setPseudo('monsieur');
+         $user->setPassword('monsieur');
+         $user->setRoles(['ROLE_ADMIN']);
+         $em->persist($user);
+
+
+         $user = new User();
+         $user->setPseudo('madame');
+         $user->setPassword('madame');
+         $user->setRoles(['ROLE_USER']);
+         $em->persist($user);
+
+         $em->flush();
+         $output->writeln('<info>Import users OK !</info>');
+      }
 
     }

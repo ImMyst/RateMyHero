@@ -1,6 +1,7 @@
 <?php
 namespace HeroBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
+
 /**
  * Hero
  *
@@ -17,78 +18,79 @@ class User
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
+
     /**
      * @var string
      *
-     * @ORM\Column(name="Pseudo", type="string", length=255, nullable=true)
+     * @ORM\Column(name="pseudo", type="string", length=255, nullable=true)
      */
     private $pseudo;
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="Password", type="string", length=255, nullable=true)
-     */
+
+      /**
+    * @var string
+    *
+    * @ORM\Column(name="password", type="string", length=255)
+      */
     private $password;
+
     /**
-     * Get id
+    * @var array
+ *
+ * @ORM\Column(name="roles", type="array")
+ */
+    private $roles;
+
+    /**
+     * Get pseudo
      *
      * @return int
      */
-    public function getId()
+    public function setPseudo()
     {
-        return $this->id;
+        return $this->pseudo;
     }
     /**
-     * @var string
+     * Set password
      *
-     * @ORM\Column(name="Film", type="string", length=255, nullable=true)
+     * @param string $password
+     *
+     * @return User
      */
-    private $film;
-    /**
-     * Set hero
-     *
-     * @param string $hero
-     *
-     * @return Hero
-     */
-    public function setPseudo($pseudo)
-    {
-        $this->pseudo = $pseudo;
-        return $this;
-    }
+
     public function setPassword($password)
     {
         $this->password = $password;
         return $this;
     }
     /**
-     * Get user
+     * Get password
      *
      * @return string
      */
-    public function getUser()
+    public function getPassword()
     {
-        return $this->user;
+        return $this->password;
     }
     /**
-     * Set type
-     *
-     * @param string $type
-     *
-     * @return User
-     */
-    public function setType($type)
-    {
-        $this->type = $type;
-        return $this;
-    }
-    /**
-     * Get type
-     *
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->type;
-    }
+ * Set roles
+ *
+    * @param array $roles
+ *
+    * @return User
+ */
+    public function setRoles($roles)
+{
+    $this->roles = $roles;
+    return $this;
+}
+/**
+ * Get roles
+ *
+ * @return array
+ */
+    public function getRoles()
+{
+    return $this->roles;
+}
+
 }
