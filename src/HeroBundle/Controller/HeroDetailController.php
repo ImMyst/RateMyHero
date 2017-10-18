@@ -27,4 +27,22 @@ class HeroDetailController extends Controller
             'hero' => $hero,
         ]);
     }
+
+    public function Review(Request $request)
+    {
+        $note = new Task();
+        $note->setCommentaire('Ajouter votre commentaire');
+        $note->setNote();
+
+        $form = $this->createFormBuilder($note)
+            ->add('Commentaire', commentary::class)
+            ->add('Note', note::class)
+            ->add('save', submit::class, array('label' => 'Create Review'))
+            ->getForm();
+
+        return $this->render('default/detail.html.twig', array(
+            'form' => $form->createView(),
+        ));
+    }
+
 }

@@ -1,5 +1,6 @@
 {% extends 'bootstrap/layout.html.twig' %}
 
+
 {% block content %}
 
 
@@ -24,7 +25,19 @@
       </ul>
 <p style="font-size: 18px">Le personnage <strong>Luke Skywalker</strong> qui est un <strong>Hero</strong> à reçu une note globale de <strong>2/5</strong>. </p><br/>
 
-
-     <a href="list.html.twig">Page liste</a>
+<form action="list" method="post">
+    <div>
+        <label for="nom">Pseudonyme :</label>
+        <input type="text" id="nom" name="user_name" />
+    </div>
+    <div>
+        <label for="message">Note :</label>
+        <textarea id="message" name="user_message"></textarea>
+    </div>
+    <div class="button">
+        <button type="submit">Envoyer votre note</button>
+    </div>
+</form>
+     <a href="list.html.twig">Liste des héros</a>
 
 {% endblock %}
