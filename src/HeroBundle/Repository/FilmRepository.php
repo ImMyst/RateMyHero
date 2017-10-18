@@ -1,24 +1,23 @@
 <?php
 namespace HeroBundle\Repository;
 use Symfony\Component\Finder\Finder;
-use StudentBundle\Entity\Film;
-use StudentBundle\Entity\Hero;
+use HeroBundle\Entity\Film;
+use HeroBundle\Entity\Hero;
 
-class FilmRepository
-/*
+class FilmRepository extends \Doctrine\ORM\EntityRepository
 {
-    public function findById(int $heroId): ?Heros
+    public function findById(int $filmId): ?Films
     {
-        $herosRepository = new HerosRepository();
-        $hero = $herosRepository->findAllHeros();
-        foreach($heros as $hero) {
-            foreach ($hero->getHeros() as $hero) {
-                if ($hero->getId() === $heroId) {
-                    return $hero;
-                }
-            }
-        }
+        $filmsRepository = new FilmRepository();
+        $film = $filmsRepository->findAllFilms();
+        foreach($films as $film) {
+            foreach ($film->getFilms() as $film) {
+                if ($film->getId() === $filmId) {
+                    return $film;
+                  }
+              }
+          }
 
-        return null;
-    }
-}*/
+          return null;
+      }
+  }

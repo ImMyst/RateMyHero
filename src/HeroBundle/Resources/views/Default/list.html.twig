@@ -4,7 +4,7 @@
 
 {% block content %}
     <div class="jumbotron">
-        <h1><i class="fa fa-graduation-cap"></i> Liste de héros</h1>
+        <h1><i class="fa fa-graduation-cap"></i> Liste des héros</h1>
         <hr />
 
         <p class="lead">
@@ -14,15 +14,18 @@
             <li class="list-group-item">
                 <b>
                   <a href="{{ path('hero_detail', {heroId: hero.id}) }}">
-                    style{{ hero.firstname }} {{ hero.lastname }}
+                    {{ hero.firstname }} {{ hero.lastname }}
                   </a>
                 </b>
-
                 <i>
+                <a href="{{ path('hero_detail', {heroId: hero.id}) }}">
+                  {{ hero.film }}
+                </a>
+                </i>
                   <a href="{{ path('hero_detail', {heroId: hero.id}) }}">
                     {{ hero.type }}
                   </a>
-                </i>
+
 
             </li>
         {% else %}

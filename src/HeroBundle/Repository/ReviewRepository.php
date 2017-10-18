@@ -1,9 +1,9 @@
 <?php
 namespace HeroBundle\Repository;
 use Symfony\Component\Finder\Finder;
-use StudentBundle\Entity\Hero;
-use StudentBundle\Entity\Review;
-class ReviewRepository
+use HeroBundle\Entity\Hero;
+use HeroBundle\Entity\Review;
+class ReviewRepository extends \Doctrine\ORM\EntityRepository
 {
     public function findById(int $reviewsId): ?Review
     {

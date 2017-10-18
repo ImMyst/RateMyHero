@@ -8,7 +8,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use HeroBundle\Controller\FilmListController;
 use HeroBundle\Repository\FilmRepository;
-use HeroBundle\Entity\Hero;
 use HeroBundle\Entity\Review;
 use HeroBundle\Entity\Film;
 
@@ -19,14 +18,11 @@ class FilmListController extends Controller
     */
     public function listAction(Request $request)
     {
-        /*$heroRepository = $this->getDoctrine()->getRepository(Hero::class);
-        $heros = $heroRepository->findAll();
+        $filmRepository = $this->getDoctrine()->getRepository(Film::class);
+        $films = $filmRepository->findAll();
 
-        return $this->render('HeroBundle:Default:list.html.twig', [
-            'heros' => $heros,
-        ]);*/
-
-        return $this->render('HeroBundle:Default:film.html.twig');
-
+        return $this->render('HeroBundle:Default:film.html.twig', [
+            'films' => $films,
+        ]);
     }
 }

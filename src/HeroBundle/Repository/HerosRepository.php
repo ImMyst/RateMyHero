@@ -1,8 +1,9 @@
 <?php
 namespace HeroBundle\Repository;
 use Symfony\Component\Finder\Finder;
-use StudentBundle\Entity\Hero;
-use StudentBundle\Entity\Review;
+use HeroBundle\Entity\Hero;
+use HeroBundle\Entity\Review;
+
 class HerosRepository
 {
     public function findById(int $heroId): ?Heros

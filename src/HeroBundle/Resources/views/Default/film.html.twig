@@ -4,20 +4,35 @@
 
 {% block content %}
     <div class="jumbotron">
-        <h1><i class="fa fa-graduation-cap"></i> Films et séries</h1>
+        <h1><i class="fa fa-graduation-cap"></i> Liste des films et séries</h1>
         <hr />
-        <ul class="list-group">
-      {% for film in films %}
-          <li class="list-group-item">
-              <a href="{{ path('film_detail', {filmId: film.id}) }}">
-                  {{ film.title }} {{ film.year }} {{ film.producer }}
-              </a>
-          </li>
-      {% else %}
-          <li class="list-group-item">Aucun Film.</li>
-      {% endfor %}
-  </ul>
+
         <p class="lead">
+          <ul class="list-group">
+        {% for film in films %}
+            <li class="list-group-item">
+                <b>
+                  <a href="{{ path('hero_detail', {filmId: film.id}) }}">
+                    {{ film.title }}
+                </b>
+                  </a>
+                  <a href="{{ path('hero_detail', {filmId: film.id}) }}">
+                    {{ film.year}}
+                  </a>
+                  <a href="{{ path('hero_detail', {filmId: film.id}) }}">
+                    {{ film.producer}}
+                  </a>
+
+
+                <i>
+
+                </i>
+
+            </li>
+        {% else %}
+            <li class="list-group-item">Aucun Films ou séries.</li>
+        {% endfor %}
+    </ul>
         </p>
     </div>
 {% endblock %}
