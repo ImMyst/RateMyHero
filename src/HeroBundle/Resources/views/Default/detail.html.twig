@@ -15,29 +15,34 @@
         </b>
         <p>
         <i>
-        <z style="font-size: 18px">
+        <a style="font-size: 18px" href="{{ path('film_detail')}}">
           Star Wars
         </i>
-        </z>
+      </a>
       </p>
 
       </p>
       </ul>
 <p style="font-size: 18px">Le personnage <strong>Luke Skywalker</strong> qui est un <strong>Hero</strong> à reçu une note globale de <strong>2/5</strong>. </p><br/>
-
+<p> <strong>Luke Skywalker</strong> est le personnage principal de la trilogie originale <a href="{{ path('film_detail')}}"><strong>Star Wars</strong></a> (épisodes IV à VI).
+   Il est le fils d'Anakin Skywalker et de Padmé Amidala et le frère jumeau de la princesse Leia Organa. Il naît en 19 av. BY dans La Revanche des Sith.
+  Il devient un chevalier Jedi et sera le héros de l'Alliance rebelle pendant la Guerre Civile Galactique dans Un nouvel espoir, L'Empire contre-attaque, Le Retour du Jedi.
+  Trois décennies plus tard, il est le dernier Jedi en vie et s'est exilé sur une planète reculée.
+</p>
+<br/>
 <form action="list" method="post">
     <div>
-        <label for="nom">Pseudonyme :</label>
+        <label for="nom">Note :</label>
         <input type="text" id="nom" name="user_name" />
     </div>
     <div>
-        <label for="message">Note :</label>
+        <label for="message">Commentaire :</label>
         <textarea id="message" name="user_message"></textarea>
     </div>
+  <br/>
     <div class="button">
         <button type="submit">Envoyer votre note</button>
     </div>
 </form>
-     <a href="list.html.twig">Liste des héros</a>
 
 {% endblock %}

@@ -14,6 +14,6 @@ class AdminController extends Controller
      */
     public function adminAction()
     {
-        return new Response('<html><body>Admin page!</body></html>');
+        return new Response('<html><body>Si vous êtes toujours là, tappez dans vos mains, ouéééé!</body></html>');
     }
 }
