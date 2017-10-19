@@ -10,12 +10,14 @@ use HeroBundle\Repository\HeroRepository;
 use HeroBundle\Controller\HeroDetailController;
 use HeroBundle\Entity\Hero;
 use HeroBundle\Entity\Review;
+use HeroBundle\Entity\Film;
 
 
 class HeroDetailController extends Controller
 {
     /**
      * @Route("/hero/detail", name="hero_detail")
+     * @Route("/film/hero_detail"), name="film_hero_detail"
      */
     public function detailAction()
     {

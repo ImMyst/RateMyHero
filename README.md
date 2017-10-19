@@ -14,3 +14,15 @@ vagrant ssh
 make install
 make start
 ```
+
+#### Login
+
+Admin:
+
+Identifiant: monsieur
+Mot de passe: monsieur
+
+User:
+
+Identifiant: madame
+Mot de passe: madame
