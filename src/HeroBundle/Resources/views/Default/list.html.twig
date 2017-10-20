@@ -4,12 +4,21 @@
 
 {% block content %}
     <div class="jumbotron">
-        <h1 style="font-family: Impact" ><i class="fa fa-users"></i> Liste des héros</h1>
+
+      <style>
+      h1
+      {
+        font-family: Impact;
+        font-size: 55px
+      }
+      </style>
+
+        <h1><i class="fa fa-users"></i>Liste des héros</h1>
         <hr />
 
         <p class="lead">
           <ul class="list-group">
-            <img class="rounded-avatar"{{ asset('/bundles/img/luke-skywalker-star-wars.jpg') }} />
+            <img {{ asset('/bundles/img/luke-skywalker-star-wars.jpg') }} />
         {% for hero in heros %}
             <li class="list-group-item">
                 <b>

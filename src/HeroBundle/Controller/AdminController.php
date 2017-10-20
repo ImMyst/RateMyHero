@@ -14,6 +14,9 @@ class AdminController extends Controller
      */
     public function adminAction()
     {
-        return new Response('<html><body>Si vous êtes toujours là, tappez dans vos mains, ouéééé!</body></html>');
-    }
+
+    return $this->render('HeroBundle:Default:admin.html.twig', [
+
+    ]);
+}
 }
