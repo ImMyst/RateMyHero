@@ -4,7 +4,7 @@ use Symfony\Component\Finder\Finder;
 use HeroBundle\Entity\Hero;
 use HeroBundle\Entity\Review;
 
-class HerosRepository
+class HerosRepository extends \Doctrine\ORM\EntityRepository
 {
     public function findById(int $heroId): ?Heros
     {

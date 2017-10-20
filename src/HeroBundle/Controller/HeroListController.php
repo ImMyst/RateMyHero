@@ -15,7 +15,7 @@ class HeroListController extends Controller
 {
     /**
     * @Route("/hero/list", name="hero_list")
-    */
+    */ 
     public function listAction(Request $request)
     {
         $heroRepository = $this->getDoctrine()->getRepository(Hero::class);

@@ -11,10 +11,10 @@
 <form action="{{ path('login') }}" method="post">
     <label for="pseudo">Identifiant:</label>
     <input type="text" id="username" name="_username" value="{{ last_username }}" />
-
+    <br/>
     <label for="password">Mot de Passe:</label>
     <input type="password" id="password" name="_password" />
-
+    <br/>
     <button type="submit">Se Connecter</button>
 </form>
 {% endblock %}

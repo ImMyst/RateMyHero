@@ -15,7 +15,7 @@ class FilmListController extends Controller
 {
     /**
     * @Route("/film/list", name="film_list")
-    */
+    */ 
     public function listAction(Request $request)
     {
         $filmRepository = $this->getDoctrine()->getRepository(Film::class);

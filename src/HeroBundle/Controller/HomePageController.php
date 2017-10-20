@@ -11,7 +11,7 @@ class HomePageController extends Controller
 {
     /**
     * @Route("/", name="homepage")
-    */
+    */ 
     public function listAction(Request $request)
     {
       return $this->render('HeroBundle:Default:homepage.html.twig');

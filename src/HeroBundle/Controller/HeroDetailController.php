@@ -25,7 +25,7 @@ class HeroDetailController extends Controller
         $hero = $herosRepository->findAll();
 
         return $this->render('HeroBundle:Default:detail.html.twig', [
-            'hero' => $hero,
+            'heros' => $hero,
         ]);
     }
 

@@ -8,19 +8,24 @@
       <p class="lead">
         <ul class="list-group">
           <img src="{{ asset('web/vendor/img/luke-skywalker-star-wars.jpg') }}" />
+          {% for hero in heros %}
         <b>
-          <z style="font-size: 25px">
-              Luke Skywalker
+          <z style="font-size: 25px" href="{{ path('hero_detail', {heroId: hero.id}) }}">
+              {{ hero.firstname }} {{ hero.lastname }}
+
           </z>
         </b>
         <p>
         <i>
-        <a style="font-size: 20px" href="{{ path('film_detail')}}">
-          Star Wars
+        <a style="font-size: 20px" href="{{ path('film_detail', {heroId: hero.id}) }}">
+          {{ hero.film }}
         </i>
       </a>
       </p>
-
+        </li>
+      {% else %}
+          <li class="list-group-item">Ce héro n'existe pas</li>
+      {% endfor %}
       </p>
       </ul>
 <p style="font-size: 17px">Le personnage <strong>Luke Skywalker</strong> qui est un <strong>Hero</strong> à reçu une note globale de <strong>2/5</strong>. </p><br/>

@@ -16,8 +16,6 @@ class FilmDetailController extends Controller
 {
     /**
      * @Route("/film/detail", name="film_detail")
-
-
      */
     public function detailAction()
     {
