@@ -26,7 +26,7 @@ Pour se connecter en **admin** :angel:
 ```bash
 Admin:
 
-Identifiant: monsieur :man:
+Identifiant: monsieur
 Mot de passe: monsieur
 ```
 
@@ -35,8 +35,7 @@ Pour se connecter en **user lambda** :baby:
 ```bash
 User:
 
-Identifiant: madame ```:woman:
-```bash
+Identifiant: madame
 Mot de passe: madame
 ```
 
@@ -46,11 +45,11 @@ Après la fin de ce projet, ils nous restent encore beaucoup de fonctionnalités
 
 - Apparence générale :
   - Modifier et améliorer le **CSS**, pourquoi pas utiliser un template déjà existant pour rendre le site plus attractif.
-  - Avoir des véritables îcones, à la place de ceux proposé par *font-awesome*
+  - Avoir des véritables îcones, à la place de ceux proposé par *font-awesome*.
 
 - Homepage:
-  - Afficher les entrées récentes de personnages et films
-  - Afficher les différentes catégories de personnages (hero, vilain, anti-hero ...)
+  - Afficher les entrées récentes de personnages et films.
+  - Afficher les différentes catégories de personnages (hero, vilain, anti-hero ...).
 
 - Listes héros et films:
   - Avoir accès à une **API** pour récolter les données sur une plus grande base de données de personnages et de films.
@@ -60,3 +59,10 @@ Après la fin de ce projet, ils nous restent encore beaucoup de fonctionnalités
 
 - Autres:
   - Implémenter un **forum** serait une idée intéressante pour impliquer un peu plus les personnes dans l'avancée du site.
+
+
+
+### A propos
+
+Projet étudiant réalisé dans le cadre de l'école **Ynov** pour le module **Symfony**. Module organisé et orchestré par **Gabriel PILLET**.
+Réalisé par **Thomas LLOBEL** et **Titouan GALVANI**.
