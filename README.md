@@ -35,7 +35,8 @@ Pour se connecter en **user lambda** :baby:
 ```bash
 User:
 
-Identifiant: madame :woman:
+Identifiant: madame ```:woman:
+```bash
 Mot de passe: madame
 ```
 
