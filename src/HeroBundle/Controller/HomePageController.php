@@ -11,6 +11,7 @@ class HomePageController extends Controller
 {
     /**
     * @Route("/", name="homepage")
+    * @Route("/hero_detail", name="homepage_hero_detail")
     */
     public function listAction(Request $request)
     {

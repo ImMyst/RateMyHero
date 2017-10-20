@@ -3,7 +3,7 @@
 ## Résumé du projet
 
 Ce projet répertorie les héros et antagonistes de vos films et séries préférées.
-Les notes sont attribuées par la communautée pour donner une note réaliste à chaque personnage.
+Les notes sont attribuées par la communauté pour donner une note réaliste à chaque personnage.
 
 ### Setup
 
@@ -13,6 +13,11 @@ vagrant up
 vagrant ssh
 make install
 make start
+```
+On peut également relancer la base donnée
+
+```bash
+make fixtures
 ```
 
 ### Login
