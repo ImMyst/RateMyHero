@@ -5,29 +5,22 @@
 
 
     <li class="list-group-item">
-      <p class="lead">
+
         <ul class="list-group">
           <img src="{{ asset('web/vendor/img/luke-skywalker-star-wars.jpg') }}" />
-          {% for hero in heros %}
-        <b>
-          <z style="font-size: 25px" href="{{ path('hero_detail', {heroId: hero.id}) }}">
-              {{ hero.firstname }} {{ hero.lastname }}
-
-          </z>
-        </b>
+          <b>
+            <z style="font-size: 25px" href="{{ path('hero_detail') }}">
+              Luke Skywalker
+            </z>
+          </b>
         <p>
-        <i>
-        <a style="font-size: 20px" href="{{ path('film_detail', {heroId: hero.id}) }}">
-          {{ hero.film }}
-        </i>
-      </a>
-      </p>
-        </li>
-      {% else %}
-          <li class="list-group-item">Ce héro n'existe pas</li>
-      {% endfor %}
-      </p>
-      </ul>
+          <i>
+            <a style="font-size: 20px" href="{{ path('film_detail')}}">
+              Star Wars
+          </i>
+            </a>
+        </p>
+        </ul>
 <p style="font-size: 17px">Le personnage <strong>Luke Skywalker</strong> qui est un <strong>Hero</strong> à reçu une note globale de <strong>2/5</strong>. </p><br/>
 <p> <strong>Luke Skywalker</strong> est le personnage principal de la trilogie originale <a href="{{ path('film_detail')}}"><strong>Star Wars</strong></a> (épisodes IV à VI).
    Il est le fils d'Anakin Skywalker et de Padmé Amidala et le frère jumeau de la princesse Leia Organa. Il naît en 19 av. BY dans La Revanche des Sith.
@@ -38,10 +31,10 @@
 <p> Les films ou séries en lien avec <strong>Luke Skywalker</strong> :</p>
 
   <a href="/film/detail">Star Wars
-  </a>
-<br/>
-<br/>
-<br/>
+    </a>
+      <br/>
+      <br/>
+      <br/>
 <form action="list" method="post">
     <div>
         <label for="nom">Note :</label>
@@ -56,5 +49,5 @@
         <button type="submit">Envoyer votre note</button>
     </div>
 </form>
-
+</li>
 {% endblock %}
