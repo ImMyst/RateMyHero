@@ -121,3 +121,4 @@ Directed by **Thomas LLOBEL** and **Titouan GALVANI**.
 * [RateMyHero - Symfony Project](https://github.com/ImMyst/RateMyHero)
 * [YDays Bibliography page - YDays Project](https://github.com/ImMyst/Ydays-Bibliography-page)
 * [Labyrinth - C#/.NET Project](https://github.com/ImMyst/Labyrinth-CSharp)
+* [Chat Node.js & socket.io](https://github.com/ImMyst/Chat-Node.js-socket.io)
