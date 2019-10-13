@@ -98,18 +98,6 @@ After the end of this project, we still have many features to implement. We will
   - Implementing a **forum** would be an interesting idea to involve a little more people in the advancement of the site.
 
 
-## A propos
-
-Projet étudiant réalisé dans le cadre de l'école *Ynov* pour le module **Symfony**. Module organisé et orchestré par **Gabriel PILLET**.
-Réalisé par **Thomas LLOBEL** et **Titouan GALVANI**.
-
-## About
-
-Student project realized in the framework of the *Ynov* school for the **Symfony** module. Module organized and orchestrated by **Gabriel PILLET**.
-Directed by **Thomas LLOBEL** and **Titouan GALVANI**.
-
-
-
 ### List of my Learning series at Ynov :
 
 * [Learning C#](https://github.com/ImMyst/Learning-CSharp-B2)
